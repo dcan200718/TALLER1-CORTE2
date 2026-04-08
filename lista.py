@@ -2,6 +2,50 @@ class lista:
     def __init__(self):
         self.head = None
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     def eliminar_primero(self):
         if self.cabeza is None:
             print("La lista está vacía. No hay nodo que eliminar.")
