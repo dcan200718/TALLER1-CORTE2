@@ -1,3 +1,4 @@
+from nodo import node
 class lista:
     def __init__(self):
         self.head = None
@@ -31,7 +32,7 @@ class lista:
          actual = self.head
 
         while actual is not None:
-         if actual.data == objetivo:
+         if actual.data == int(objetivo):
             return True
         actual = actual.next
 
