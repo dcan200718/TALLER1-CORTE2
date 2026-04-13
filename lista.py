@@ -94,6 +94,41 @@ class Lista:
 
             while actual.next is not None:
                 if actual.data > actual.next.data:
-                    actual.data, actual.next.data = actual.next.data, actual.data
+                    temp=actual.data
+                    actual.data = actual.next.data
+                    actual.next.data = temp
                     cambiado = True
                 actual = actual.next
+
+    def ordenar(self):
+        if self.head is None:
+            return
+
+        cambiado = True
+
+        while cambiado:
+            cambiado = False
+            prevAnterior = None  
+            anterior = self.head 
+            actual = self.head.next  
+
+            while actual is not None:
+                if anterior.data > actual.data:
+
+                    if prevAnterior is not None:
+                        prevAnterior.next = actual
+                    else:
+                        self.head = actual  
+
+                    anterior.next = actual.next
+
+                    actual.next = anterior
+
+                    prevAnterior = actual  
+                    actual = anterior.next 
+                    cambiado = True
+
+                else:
+                    prevAnterior = anterior
+                    anterior = actual
+                    actual = actual.next
